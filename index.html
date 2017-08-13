@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jingdong</title>
+    <meta name="viewport" content="width=device-width">
+
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+<script>
+    function Rem() {
+
+        var rem = document.documentElement.clientWidth / 7.5;
+        console.log(rem)
+        document.documentElement.style.fontSize = rem + 'px';
+        document.body.style.fontSize = rem + 'px';
+        if (document.documentElement.clientWidth >= 750) {
+            document.documentElement.clientWidth = 750;
+            document.documentElement.style.fontSize = rem + 'px';
+            document.body.style.fontSize = rem + 'px';
+        } else if (document.documentElement.clientWidth <= 320) {
+            document.documentElement.clientWidth = 320;
+            document.documentElement.style.fontSize = rem + 'px';
+            document.body.style.fontSize = rem + 'px';
+        }
+    }
+    Rem()
+    window.onresize = function() {
+        Rem();
+    };
+</script>
+
+</html>
